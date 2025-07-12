@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "FakeCall.AI",
+    "slug": "fakecall-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#007AFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fakecall.ai",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app uses the microphone for optional voice recording features during fake calls.",
+        "NSUserNotificationsUsageDescription": "This app sends notifications to simulate incoming fake calls at scheduled times."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#007AFF"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.fakecall.ai",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.VIBRATE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.WAKE_LOCK"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#007AFF",
+          "sounds": [
+            "./assets/notification-sound.wav"
+          ]
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow FakeCall.AI to access your microphone for voice recording features."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    }
+  }
+}
